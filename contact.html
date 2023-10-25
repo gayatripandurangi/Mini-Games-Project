@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <h1>Contact Page</h1>
+        <script src="../script/script.js"></script>
+    </head>
+    <body>
+        <section>
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
+                Impedit dolore voluptatum et ab tempora aliquid tempore? <br/>
+                Odio nobis laudantium quibusdam, ducimus, omnis nam, ea vel esse nesciunt assumenda alias praesentium?<br/>
+            </p>
+        </section>
+        <form id="contactForm" onsubmit="return formValidation()">
+            <label for="name">Name</label><br/>
+            <input type="text" id="name" required/><br/><br/>
+            <label for="email">Email</label><br/>
+            <input type="text" id="email" required/><br/><br/>
+            <label for="reason">How can we help you today?</label><br/>
+            <select name="reasons" id="reason" required>
+                <option value="none">--None--</option>
+                <option value="New Game Request">New Game Request</option>
+                <option value="Report Bug">Report Bug</option>
+            </select><br/><br/>
+            <label for="message">Message</label><br/>
+            <textarea name="message" id="message" rows="4" cols="30" required></textarea><br/><br/>
+            <input type = "submit" value="Submit"/>
+        </form>
+    </body>
+</html>
