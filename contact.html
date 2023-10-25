@@ -1,21 +1,47 @@
 <html>
     <head>
-        <h1>Contact Page</h1>
-        <script src="../script/script.js"></script>
+        <h1 class="logo">MINI GAMES</h1>
+        <link rel="stylesheet" type="text/css" href="./styles/contact.css"/>
     </head>
     <body>
+        <div class="navbar">
+            <a href="./index.html">Home</a>
+             <div class="dropdown">
+              <button class="dropbtn">Games 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Game 1</a>
+                <a href="#">Rock ,Paper & Scissor</a>
+                <a href="#">Game 3</a>	  
+                <a href="#">Game 4</a>
+              </div>
+            </div> 
+             <a class="active" href="./contact.html">Contact</a>
+              <a href="#login">Login</a>
+               <a href="#leaderboard">Leaderboard</a>
+          </div>
+          <div class="games">
+        <div class = "flex-container">
+        <div>
         <section>
             <h1>About</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
                 Impedit dolore voluptatum et ab tempora aliquid tempore? <br/>
-                Odio nobis laudantium quibusdam, ducimus, omnis nam, ea vel esse nesciunt assumenda alias praesentium?<br/>
+                Odio nobis laudantium quibusdam, ducimus, omnis nam, <br/>
+                ea vel esse nesciunt assumenda alias praesentium?<br/>
             </p>
         </section>
-        <form id="contactForm" onsubmit="return formValidation()">
+    </div>
+    <div>
+        <form id="myform">
+            <h1>Get in Touch!</h1>
             <label for="name">Name</label><br/>
-            <input type="text" id="name" required/><br/><br/>
+            <input type="text" id="name" required/>
+            <output id="errorName" class="error"></output><br/><br/>
             <label for="email">Email</label><br/>
-            <input type="text" id="email" required/><br/><br/>
+            <input type="text" id="email" required/>
+            <output id="errorEmail" class="error"></output><br/><br/>
             <label for="reason">How can we help you today?</label><br/>
             <select name="reasons" id="reason" required>
                 <option value="none">--None--</option>
@@ -24,7 +50,13 @@
             </select><br/><br/>
             <label for="message">Message</label><br/>
             <textarea name="message" id="message" rows="4" cols="30" required></textarea><br/><br/>
-            <input type = "submit" value="Submit"/>
+            <button type="submit" class="submit">Submit</button>
         </form>
+    </div>
+    </div>
     </body>
+    <footer><br/>
+        COPYRIGHT PROTECTED ©
+    </footer>
+    <script src="./scripts/contact.js"></script>
 </html>
