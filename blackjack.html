@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <h1 class="logo">MINI GAMES</h1>
+    <link rel="stylesheet" href="./styles/blackjack.css" />
+    <script type="text/javascript" src="./scripts/blackjack.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="active" href="./index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Games
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Game 1</a>
+          <a href="#">Rock ,Paper & Scissor</a>
+          <a href="./blackjack.html">Blackjack</a>
+          <a href="#">Game 4</a>
+        </div>
+      </div>
+      <a href="./contact.html">Contact</a>
+      <a href="#login">Login</a>
+      <a href="#leaderboard">Leaderboard</a>
+    </div>
+    <div class="game-container">
+      <h2>BLACKJACK GAME</h2>
+      <div class="hands-container">
+        <div class="dealer-hand">
+          <h2>Dealer's Hand</h2>
+          <div id="dealer-cards" class="dealer-cards"></div>
+        </div>
+        <div class="player-hand">
+          <h2>Player's Hand</h2>
+          <div id="player-cards" class="player-cards"></div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="deal">Deal</button>
+        <button id="hit">Hit</button>
+        <button id="stand">Stand</button>
+      </div>
+      <p id="message"></p>
+    </div>
+    <a href="./index.html" class="back-btn">Back to main page</a>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
