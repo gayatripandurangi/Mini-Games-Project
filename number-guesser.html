@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <h1 class="logo">MINI GAMES</h1>
+        <link rel="stylesheet" type="text/css" href="./styles/number-guesser.css"/>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./index.html">Home</a>
+             <div class="dropdown">
+              <button class="dropbtn">Games 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content active">
+                <a href="./number-guesser.html">Number Guesser</a>
+                <a href="./rps.html">Rock ,Paper & Scissor</a>
+                <a href="./blackjack.html">BlackJack</a>	  
+                <a href="#">Tic-Tac-Toe</a>
+              </div>
+            </div> 
+             <a href="./contact.html">Contact</a>
+              <a href="#login">Login</a>
+               <a href="#leaderboard">Leaderboard</a>
+        </div>
+        <h2 id="gameName">Number Guesser</h2>
+        <div class="game">
+            <div class="gameboard">
+                <h2>Guess the Number </h2>
+                <h3>Enter any number between 1 to 10.</h3>
+                <h4>*Maximum allowed attempts are 5</h4>
+                <form id="gameForm">
+                    <input type="Text" placeholder="Enter value.." id="num"/>
+                    <br/><br/>
+                    <button type="submit" class="submit-btn" id="submit-btn">Play</button>
+                    <button type="reset" class="reset-btn" id="reset-btn">Reset</button>
+                </form>
+                <div id="result">
+                    <span id="result-text"></span>
+                    <img src="./images/win.gif" id="win_img" height="100" width="100"/>
+                </div>
+                <div id="attempts">
+                    <span id="attempts-text"></span>
+                    <img src="./images/game-over.gif" id="lose_img" height="100" width="100"/>
+                </div>
+                <br/>
+                <table>
+                    <tr>
+                        <th>Low guesses</th>
+                        <th>High guesses</th>
+                    </tr>
+                    <tr>
+                        <td id="l1">&nbsp;</td>
+                        <td id="h1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="l2">&nbsp;</td>
+                        <td id="h2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="l3">&nbsp;</td>
+                        <td id="h3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="l4">&nbsp;</td>
+                        <td id="h4">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="l5">&nbsp;</td>
+                        <td id="h5">&nbsp;</td>
+                    </tr>
+                </table>
+                <br/>
+                <button type="button" disabled class="play-again" id="play-again" onclick="playagain()">Play again</button>
+            </div>
+        </div>
+    </body>
+    <a href="./index.html" class="back-btn">Back to main page</a>
+    <footer><br/>
+        COPYRIGHT PROTECTED ©
+    </footer>
+    <script src="./scripts/number-guesser.js"></script>
+</html>
