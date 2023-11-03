@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const X_TURN = "  x  ";
     const O_TURN = "  o  ";
     // Initialize game variables
-    let XTurn = X_TURN;
+    let XOturn = X_TURN;
     let gameBoard = [
         [EMPTY_BOX, EMPTY_BOX, EMPTY_BOX],
         [EMPTY_BOX, EMPTY_BOX, EMPTY_BOX],
@@ -26,13 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to handle a player's move
     function makeMove(row, col) {
         if (gameBoard[row][col] === EMPTY_BOX) {
-            gameBoard[row][col] = XTurn;
+            gameBoard[row][col] = XOturn;
             updateCell(row, col);
             checkWin();
             checkTie();
             switchPlayer();
+            if (currentPlayer === "0") {
+                // computer's turn
+                setTimeout(computerMove, 1000); // after one sec, computer turn (set timeout to 1 sec)
+            }
         }
     }
+       
     // Function to update a cell in the DOM
     function updateCell(row, col) {
         const cellIndex = row * 3 + col;
@@ -47,16 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
         // Implement your tie-checking logic here
     }
     // Function to switch players
-    function switchPlayer() {
-        if (XTurn === X_TURN) {
-            XTurn = O_TURN;
-            currentPlayer = "O";
-        } else {
-            XTurn = X_TURN;
-            currentPlayer = "X";
+    function computerMove() {
+        while (true) {
+            const row = Math.floor(Math.random() * 3);
+            const col = Math.floor(Math.random() * 3);
+            
+            if (gameBoard[row][col] === EMPTY_BOX) {
+                gameBoard[row][col] = O_TURN; // "O" represents the computer
+                updateCell(row, col);
+                checkWin();
+                checkTie();
+                switchPlayer(); // Switch back to the player's turn
+                break;
+            }
         }
-        messageElement.textContent = `Player ${currentPlayer}'s turn`;
     }
+    
+    // computers turn when called.
+    computerMove();
+    
+        messageElement.textContent = `Player ${currentPlayer}'s turn`;
+    });
     // Function to reset the game
     function resetGame() {
         gameBoard = [
@@ -64,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             [EMPTY_BOX, EMPTY_BOX, EMPTY_BOX],
             [EMPTY_BOX, EMPTY_BOX, EMPTY_BOX]
         ];
-        XTurn = X_TURN;
+        XOturn = X_TURN;
         currentPlayer = "X";
         messageElement.textContent = "Player X's turn";
         for (let i = 0; i < 9; i++) {
@@ -74,4 +90,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add an event listener for the reset button
     const resetButton = document.getElementById("reset-button");
     resetButton.addEventListener("click", resetGame);
-});
