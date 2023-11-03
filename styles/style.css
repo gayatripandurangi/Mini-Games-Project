@@ -1,0 +1,42 @@
+/* Style the game board container */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Style individual cells in the game board */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Style the message element */
+#message {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Style the reset button */
+#reset-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Hover effect for the reset button */
+#reset-button:hover {
+    background-color: #45a049;
+}
+
+/* Additional styling rules can be added as needed. */
