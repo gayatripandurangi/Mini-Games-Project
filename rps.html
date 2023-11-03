@@ -1,54 +1,102 @@
 <HTML>
-<HEAD>
-<link rel="stylesheet" href="./styles/rps.css">
-<TITLE>Mini Game Project
-</TITLE>
-<H1 class="logo">ROCK, PAPER & SCISSORS</H1>
+  <HEAD>
+    <link rel="stylesheet" href="./styles/rps.css">
+    <TITLE>Mini Game Project
+    </TITLE>
+<script src="./scripts/rps.js"></script>
+    <H1 class="logo">ROCK, PAPER & SCISSORS</H1>
 </HEAD>
 <BODY>
-<div class="navbar">
-  <a  href="./index.html">Home</a>
-   <div class="dropdown">
-    <button class="dropbtn">Games 
+  <div class="navbar">
+    <a  href="./index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Games 
       <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content active">
-      <a href="./number-guesser.html">Number Guesser</a>
-      <a href="./rps.html">Rock ,Paper & Scissor</a>
-      <a href="./blackjack.html">BlackJack</a>	  
-      <a href="#">Tic-Tac-Toe</a>
-    </div>
-  </div> 
-   <a href="./contact.html">Contact</a>
+      </button>
+      <div class="dropdown-content">
+        <a href="./number-guesser.html">Number Guesser</a>
+        <a class="active" href="./rps.html">Rock ,Paper & Scissor</a>
+        <a href="#">Tic Tac Toe</a>	  
+        <a href="./blackjack.html">Blackjack</a>
+      </div>
+    </div> 
+    <a href="./contact.html">Contact</a>
     <a href="#login">Login</a>
-	 <a href="#leaderboard">Leaderboard</a>
-</div>
-<div class="games">
-  <section class="instruction">
-    <h3 style ="text-align: center;">INSTRUCTIONS TO PLAY</h3>
-    Rock, Paper, Scissors with a Computer 
+	  <a href="#leaderboard">Leaderboard</a>
+  </div>
+  <div id="games" class="game">
+    <section class="instruction">
+      <h3 style ="text-align: center;">INSTRUCTIONS TO PLAY</h3>
+        Rock, Paper, Scissors with a Computer 
+      <li class="lines">Choose Your Gesture:</li> When you're ready to play, select your choice from the available options (Rock, Paper, or Scissors). You'll usually do this by clicking a image.
+      <li class="lines">System's Choice:</li> The computer system will randomly generate its choice.
+      <li class="lines">Determine the Winner:</li> The system will compare your choice to its choice, following the same rules as when playing against another person. For example, if you chose Rock and the system chose Scissors, you win. The result will be displayed on the screen.
+      <li class="lines">Play Again:</li> if you want to continue. You can usually click a "Play Again" button to start a new round.
+      <li class="lines">Enjoy the Game:</li> Play as many rounds as you like and have fun trying to beat the computer.
+      Keep in mind that when playing against a computer, the system's choice is typically determined randomly, so there's no strategy involved. It's a simple game of chance, just like playing with a human opponent. Enjoy the game and try to outsmart the system!
+    </section>
+    <section class="field">
+      <label>PLAYER NAME:</label>
+      <input type="text" id="field1" value=""   placeholder="Your Name goes here">
+    </section>
+    <section class="button">
+      <button onclick="makedivinvisible()">START GAME</button>
+    </section>
+  </div>
+  <div id="heading" class="heading">
+    <H3 id="winorloose"> Select one of below 3 options</H3>
+  </div>
+  
+  <div id="images1" class="images">
 
-    <li class="lines">Choose Your Gesture:</li> When you're ready to play, select your choice from the available options (Rock, Paper, or Scissors). You'll usually do this by clicking a image.
+    <div id="scoreboard" class="score">
+      <h2>Scoreboard</h2>
+     <table>
+       <tr>
+           <th><label id="player">Player</label></th>
+           <th><label>System</label></th>
+       </tr>
+       <tr>
+           <td>
+             <label id="playerscore">0</label>
+           </td>
+           <td>
+             <label id="systemscore">0</label>
+           </td>
+       </tr>
+     </table>
+   </div>
 
-    <li class="lines">System's Choice:</li> The computer system will randomly generate its choice.
     
-    <li class="lines">Determine the Winner:</li> The system will compare your choice to its choice, following the same rules as when playing against another person. For example, if you chose Rock and the system chose Scissors, you win. The result will be displayed on the screen.
-    
-    <li class="lines">Play Again:</li> if you want to continue. You can usually click a "Play Again" button to start a new round.
-    
-    <li class="lines">Enjoy the Game:</li> Play as many rounds as you like and have fun trying to beat the computer.
-    
-    Keep in mind that when playing against a computer, the system's choice is typically determined randomly, so there's no strategy involved. It's a simple game of chance, just like playing with a human opponent. Enjoy the game and try to outsmart the system!
+    <div id="options" class="options">
+     
+      <img id="img1" src="https://content.instructables.com/F02/BBV9/I7Q0TFTU/F02BBV9I7Q0TFTU.jpg?auto=webp&fit=bounds&frame=1" 
+    onclick="chooserock()" height="90%" width="25%">
+    <img  id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJmmKD1kXcKkp6DglJ9XfmWKklh3tLApTGrBAYsy6HyZN-z1jc_gXpIEwKTaXvcSA97HQ&usqp=CAU"
+    onclick="choosepaper()" height="90%" width="25%">
+    <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUFkdcJBi5ePtE8c75EAd15ilKj-RimD1FFoZuPs-IFEkU5rwwzJ6mOsDCP5cy-aHX5S0&usqp=CAU"
+      onclick="choosescissors()" height="90%" width="29%">
       
-  </section>
-  <section class="field">
-  <label for="field1">PLAYER NAME:</label>
-  <input   type="text" id="field1" name="field1"
-  placeholder="Your Name goes here">
-</section>
-<section class="button">
-  <button >START GAME</button></section>
- 
+    </div>
+   
+   
+    <div id="hidden" class="hidden">
+     <img id="img4" class="img4" src="https://content.instructables.com/F02/BBV9/I7Q0TFTU/F02BBV9I7Q0TFTU.jpg?auto=webp&fit=bounds&frame=1"  
+     height="90%" width="25%">
+     <img id="img5" class="img5" src="https://content.instructables.com/F02/BBV9/I7Q0TFTU/F02BBV9I7Q0TFTU.jpg?auto=webp&fit=bounds&frame=1"
+     height="90%" width="25%" >
+    </div>
+  
+</div>
+
+<div id="btn" class="buttons">
+<button onclick="reset()">Play Again</button>
+   <button onclick="playagain()">New Game</button>
+</div>
+   <div id="backbtn">
+<button onclick="history.back()">Back</button>
+</div>
+
 </BODY>
 <FOOTER><br>
 COPYRIGHT PROTECTED ©
