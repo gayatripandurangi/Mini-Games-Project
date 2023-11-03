@@ -80,20 +80,24 @@ body {
 }
 
 .gameboard{
-  margin:10%;
   padding: 5%;
-  background-image: url("../images/bg_img.PNG");
+  background-color: #fde7d3;
+  border: 2px solid black;
+  box-shadow: 2px 2px 8px #333;
   background-repeat: repeat;
 }
 
-input[type=text] {
+input[type=text]{
   width: 100%;
   padding: 2%;
   border: 2px solid gray;
-  color:#d5bab4;
 }
 
-h2,h3{
+input[type=text]:focus{
+  border: 2px solid lightblue;
+}
+
+h2,h3,h4{
   color: #262b36;
 }
 
@@ -113,6 +117,7 @@ th{
 
 button{
   border: none;
+  border-radius: 6px;
   color: white;
   background-color: #262b36;
   text-align: center;
@@ -126,19 +131,57 @@ button :disabled, button[disabled]{
   background-color: grey;
 }
 
-.submit-btn{
-  background-color: red;
+button:hover:enabled{
+  box-shadow: 1px 1px 4px #333;
 }
-
-.reset-btn{
+.submit-btn{
   background-color: green;
 }
 
+.reset-btn{
+  background-color: red;
+}
 
 .play-again{
   background-color: blue;
   color: white;
   width: 100%;
+}
+
+#result-text{
+  display: none;
+  font-style: italic;
+  font-weight: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#attempts-text{
+  display: none;
+  font-style: italic;
+  font-weight: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#win_img{
+  display: none;
+}
+
+#lose_img{
+  display: none;
+}
+
+.back-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#gameName{
+  text-align: center;
 }
   
   footer{

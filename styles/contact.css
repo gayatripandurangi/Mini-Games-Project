@@ -100,14 +100,26 @@ footer{
 }
 
 .submit{
-    background-color:#04AA6D;
-    border: none;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  padding: 4%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .submit:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 1px 1px 4px #333;
 }

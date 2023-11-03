@@ -17,7 +17,7 @@ form.addEventListener("submit",function(event){
     if(fnameValue.match(nameTest) == null){
         document.getElementById("errorName").innerHTML = "<br/>Please enter only alphabets in Name";
     }
-    if(emailValue.match(emailTest) == null){
+    else if(emailValue.match(emailTest) == null){
         document.getElementById("errorEmail").innerHTML = "<br/>Please enter a valid email";
     }
     else{
