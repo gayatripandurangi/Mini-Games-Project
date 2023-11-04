@@ -4,9 +4,9 @@ body {
     background-color:  #FAFAD2;
   }
   
-  .logo{
-  margin-left:43%;
-  float:center;
+  .logo {
+    text-align: center;
+    padding-top:30px;
   }
   
   .active{
@@ -33,12 +33,13 @@ body {
   }
   
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
+    border-radius: none;
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: inherit;
+    background-color: #04aa6d;
     font-family: inherit;
     margin: 0;
   }
