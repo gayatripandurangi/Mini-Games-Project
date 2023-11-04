@@ -4,7 +4,7 @@ function makedivinvisible(){
     console.log(inpt.value);
     if(inpt.value==''){
       document.getElementById('player').innerHTML="No Name";
-    }
+    } 
     else{
     document.getElementById('player').innerHTML=inpt.value;
     }
@@ -30,8 +30,10 @@ function makedivinvisible(){
     const div111=document.getElementById('hidden');
     div111.style.display='none';
     document.getElementById('winorloose').innerHTML="Choose one of below 3 options";
+    var rese=document.getElementById('winorloose');
+        rese.style.color='black';  
     }
-    
+     
     function playagain(){
       const div11=document.getElementById('options');
     div11.style.display='flex';
@@ -107,18 +109,24 @@ function makedivinvisible(){
     img55.style.display='inherit';
     img55.style.height="90%";
     img55.style.width="25%";
-              if(userselect==choice[i]){
+              if(userselect==choice[i]){ 
         //tie
-        document.getElementById('winorloose').innerHTML="It's a Tie , Lets go for win next time";    
+        document.getElementById('winorloose').innerHTML="It's a Tie , Lets go for win next time";  
+        var tie=document.getElementById('winorloose');
+        tie.style.color='blue';  
       }
       else if( (userselect=='rock'&& choice[i]=='scissor')||(userselect=='paper' && choice[i]=='rock' )||(userselect=='scissor' && choice[i]=='paper')){
         document.getElementById('winorloose').innerHTML="Congratulations!!! You Won this round";
+        var win=document.getElementById('winorloose');
+        win.style.color='green';  
         let player2=+player+1;
         document.getElementById('playerscore').innerHTML=player2;
         //userscore=userscore+1;
         }
         else{
-          document.getElementById('winorloose').innerHTML="Oh! Ho! You Loose!! Better Luck Next Time";
+          document.getElementById('winorloose').innerHTML="Oh! Ho! You Lose!! Better Luck Next Time";
+          var lose=document.getElementById('winorloose');
+        lose.style.color='red';  
           console.log(system);
           let system2=+system+1;
           console.log(system2);
