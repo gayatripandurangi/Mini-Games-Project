@@ -51,7 +51,7 @@ form.addEventListener("submit",function(event){
     if((!win) && (attempts <= 0)){
         attemptsText.style.display = "block";
         attemptsText.style.color = "red";
-        attemptsText.innerHTML = "You have exceeded the number of maximum attempts: 5 <br/> Sorry Try again next time &#128542;";
+        attemptsText.innerHTML = "You have exceeded the number of maximum attempts: 5 <br/> Sorry Try again next time &#128542; <br/> The Number was "+randomNum;
         loseImage.style.display = "block";
         enablePlayButton();
     }
