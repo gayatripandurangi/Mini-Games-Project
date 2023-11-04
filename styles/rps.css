@@ -2,9 +2,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin:0;
   background-color:  #FAFAD2;
-}
+} 
 
-.logo {
+.logo { 
   text-align: center;
   padding-top:30px;
 }
@@ -74,7 +74,10 @@ background-color:#04AA6D;
   display: block;
  }
 
+
+
  .instruction{
+  background-color: antiquewhite;
   border:4px solid #000; 
   padding: 10px;
     width:97%;
@@ -105,7 +108,7 @@ background-color:#04AA6D;
 
 
 h3{
-  color:#000;
+  color: #000;
 }
 
 h2{
@@ -121,18 +124,26 @@ h2{
   display: none;
   width:60%;
   height:10%;
-  margin-left:20%;
+  margin-left:12%;
+}
+
+.heading>h3{
+font-family:cursive;
+font-size: 30;
+color:black;
 }
 
 .options{
    display:none;
+   border:4px solid red; 
    width:50%;
   height:100%;  
   margin-left: 5%;
 }
 
 .options>img{
-  margin:1%;
+  margin:2%;
+  margin-left:5%;
   }
 
 .buttons{
@@ -150,22 +161,24 @@ h2{
 
 .hidden{
   display: none;
+  border:4px solid red; 
   width:50%;
   height:100%;
   text-align: center;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .hidden>img{
-    margin:10px;
+    margin:1%;
     padding:10px;
+    margin-left:14%;
 }
 
 
 .score{   
   display:none;
   width:30%;
-  height:55%;
+  height:70%;
   float:right;
   margin-right:5%;
   }
@@ -175,8 +188,27 @@ h2{
   display: none;
   width:100%;
   text-align: center;
-  height:20%;
+  height:20%;  
 }
+
+button:hover:enabled{
+  box-shadow: 1px 1px 4px #333;
+}
+.playa{  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;  
+  border-radius: 4px;
+  padding:6px;
+}
+
+.ng{
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding:6px;
+  }
 
 .img4{
   display: inherit;
@@ -192,11 +224,26 @@ h2{
   margin-left: 60%;
 }
 
+.start{
+
+  padding: 0.5%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 .backbtn{
   display: none;
   margin-top: 5%;
 }
 
+.bk{
+  text-align: center;
+  font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding:6px;
+    margin-left: 1%;
+}
 
 table{
   font-family: Arial, Helvetica, sans-serif;
@@ -206,7 +253,7 @@ table{
 }
 
 td,th{
-  border:1px solid #dddddd;
+  border:1px solid #000;
   text-align: center;
   padding:8px;
 }
