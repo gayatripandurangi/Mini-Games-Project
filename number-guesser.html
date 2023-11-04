@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="./styles/number-guesser.css"/>
     </head>
     <body>
+        <!--navigation bar-->
         <div class="navbar">
             <a href="./index.html">Home</a>
              <div class="dropdown">
@@ -22,6 +23,20 @@
                <a href="#leaderboard">Leaderboard</a>
         </div>
         <h2 id="gameName">Number Guesser</h2>
+        <div class="flex-container">
+        <!--instructions for the game-->
+        <div class="instructions" title="Instructions">
+            <p>Instructions</p>
+            <ol>
+                <li>You have to guess a number between 1 and 10.</li>
+                <li>You are allowed a total of 5 attempts to guess the correct number.</li>
+                <li>After each attempt, you will receive a message indicating whether your guess was too high or too low.</li>
+                <li>If you guess the correct number within the 5 attempts, you win the game. Otherwise, you lose.</li>
+                <li>You can click the "Reset" button to start a new game at any time.</li>
+            </ol>
+            <p>Enjoy the game!!!</p>
+        </div>
+        <!--game board-->
         <div class="game">
             <div class="gameboard">
                 <h2>Guess the Number </h2>
@@ -72,7 +87,9 @@
                 <button type="button" disabled class="play-again" id="play-again" onclick="playagain()">Play again</button>
             </div>
         </div>
+        </div>
     </body>
+    <!--back arrow-->
     <a href="./index.html" class="back-btn">Back to main page</a>
     <footer><br/>
         COPYRIGHT PROTECTED ©
