@@ -3,7 +3,6 @@ let userNum = document.getElementById("num");
 let submit_btn = document.getElementById("submit-btn");
 let resetBtn = document.getElementById("reset-btn");
 let playAgainBtn = document.getElementById("play-again");
-
 let attemptsText=document.getElementById("attempts-text");
 let resultText = document.getElementById("result-text");
 let winImage = document.getElementById("win_img");
@@ -15,6 +14,9 @@ let h = 0;
 let l = 0;
 let win = false;
 
+//function to handle user inputs
+//displays high, low guess messages
+//displays win/loss messages 
 form.addEventListener("submit",function(event){
     event.preventDefault();
     resultText.innerHTML = "";
@@ -55,16 +57,19 @@ form.addEventListener("submit",function(event){
     }
 })
 
+//game reset function
 form.addEventListener("reset",function(){
     location.reload();
 })
 
+//function to enable playbutton after winning or lossing or reseting the game
 function enablePlayButton(){
     playAgainBtn.disabled = false;
     submit_btn.disabled = true;
     resetBtn.disabled = true;
 }
 
+//function to reset the game when play again button in pressed
 function playagain(){
     location.reload();
 }
