@@ -82,18 +82,23 @@ body {
 /* Navbar css end */
 
 .game-container {
-  border: 2px solid #3498db;
+  /* border: 2px solid #3498db; */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ecf0f1;
+  background-color: green;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .blackjack-description {
   border: 4px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.scoreboard{
   padding: 20px;
   margin-bottom: 30px;
 }
@@ -104,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ecf0f1;
+  background-color: rgb(95, 193, 95);
   border-radius: 10px;
 }
 
