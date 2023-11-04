@@ -13,7 +13,7 @@
       <button class="dropbtn">Games 
       <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
+      <div class="dropdown-content"> 
         <a href="./number-guesser.html">Number Guesser</a>
         <a class="active" href="./rps.html">Rock ,Paper & Scissor</a>
         <a href="#">Tic Tac Toe</a>	  
@@ -40,7 +40,7 @@
       <input type="text" id="field1" value=""   placeholder="Your Name goes here">
     </section>
     <section class="button">
-      <button onclick="makedivinvisible()">START GAME</button>
+      <button class='start' onclick="makedivinvisible()">START GAME</button>
     </section>
   </div>
   <div id="heading" class="heading">
@@ -75,7 +75,7 @@
     <img  id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJmmKD1kXcKkp6DglJ9XfmWKklh3tLApTGrBAYsy6HyZN-z1jc_gXpIEwKTaXvcSA97HQ&usqp=CAU"
     onclick="choosepaper()" height="90%" width="25%">
     <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUFkdcJBi5ePtE8c75EAd15ilKj-RimD1FFoZuPs-IFEkU5rwwzJ6mOsDCP5cy-aHX5S0&usqp=CAU"
-      onclick="choosescissors()" height="90%" width="29%">
+      onclick="choosescissors()" height="90%" width="25%">
       
     </div>
    
@@ -90,11 +90,12 @@
 </div>
 
 <div id="btn" class="buttons">
-<button onclick="reset()">Play Again</button>
-   <button onclick="playagain()">New Game</button>
+<button class="playa" onclick="reset()">Play Again</button>
+   <button class="ng" onclick="playagain()">New Game</button>
 </div>
-   <div id="backbtn">
-<button onclick="history.back()">Back</button>
+   <div id="backbtn" >
+    
+  <button class="bk" onclick="history.back()">Back</button>
 </div>
 
 </BODY>
