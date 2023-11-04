@@ -1,10 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background-color:  #FAFAD2;
   }
   
-  .logo{
-  margin-left:43%;
-  float:center;
+  .logo {
+    text-align: center;
+    padding-top:30px;
   }
   
   .active{
