@@ -1,12 +1,12 @@
 /* Style the body to set the background image */
 body {
-    background-image: url('your-background-image.jpg');
+    background-image: url('https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg?resize=768%2C528');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     text-align: center;
-    color: rgb(11, 0, 0); /* Text color for better contrast */
+    color: rgb(0, 11, 9); /* Text color for better contrast */
 }
 
 /* Center the game container */
@@ -47,6 +47,7 @@ body {
 #message {
     font-size: 18px;
     margin: 20px 0;
+    color: rgb(247, 13, 9); 
 }
 
 /* Style the reset button */
