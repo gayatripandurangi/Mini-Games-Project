@@ -33,12 +33,13 @@ body {
   }
   
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
+    border-radius: none;
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: inherit;
+    background-color: #04aa6d;
     font-family: inherit;
     margin: 0;
   }
