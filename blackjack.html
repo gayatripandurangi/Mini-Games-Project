@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blackjack</title>
-    <H1 class="logo">TinyTreat Arcade</H1>
-    <link rel="stylesheet" href="./styles/blackjack.css" />
-    <script type="text/javascript" src="./scripts/blackjack.js"></script>
-  </head>
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="./styles/blackjack.css">
+<TITLE>TinyTreat Arcade</TITLE>
+<H1 class="logo">TinyTreat Arcade</H1>
+</HEAD>
   <body>
     <div class="navbar">
-      <a class="active" href="./index.html">Home</a>
+      <a href="./index.html">Home</a>
       <div class="dropdown">
         <button class="dropbtn">
           Games
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="#">Game 1</a>
-          <a href="#">Rock ,Paper & Scissor</a>
-          <a href="./blackjack.html">Blackjack</a>
-          <a href="#">Game 4</a>
+          <a href="./number-guesser.html">Number Guesser</a>
+          <a href="./rps.html">Rock ,Paper & Scissor</a>
+          <a href="#">Tic-Tac-Toe</a>
+          <a class="active" href="./blackjack.html">BlackJack</a>
         </div>
       </div>
       <a href="./contact.html">Contact</a>
@@ -30,26 +26,41 @@
     <div class="game-container">
       <h2>BLACKJACK GAME</h2>
       <div class="blackjack-description">
-        <h3 style ="text-align: center;">INSTRUCTIONS TO PLAY</h3>
-        Blackjack with a Computer 
-    
-        <li class="lines">Cards dealing:</li> You are dealt two cards each whilst the dealer is dealt one face up. If your first 2 cards add up to 21 (an Ace and a card valued 10), that’s Blackjack! If they have any other total, decide whether you wish to hit or stand. You can continue to draw cards until you are happy with your hand.
-    
-        <li class="lines">Player's Turn:</li> If the player has a total card value of 21 from the initial deal (an Ace and a 10-value card), it's a Blackjack. If the dealer does not also have Blackjack, the player wins.
-        The player can decide to "Hit", which means taking an additional card to increase their hand value.
-        The player can keep "Hitting" until they decide to "Stand" or their total card value exceeds 21, which is called a "bust". If the player busts, the dealer wins.
-        
-        <li class="lines">Dealer's Turn:</li> Once the player stands or busts, it's the dealer's turn.
-        The dealer reveals their hidden card.
-        The dealer will continue to "Hit" until their hand value is 17 or higher.
-        If the dealer's hand value exceeds 21, the dealer "busts" and the player wins (unless the player also busted earlier).
-        
-        <li class="lines">Determining the Winner:</li> If neither the dealer nor the player busts, the hand with the highest total card value wins.
-        If both the dealer and the player have the same hand value, it's a tie.
-        
-        <li class="lines">Aces:</li> An Ace can be valued as either 1 or 11, depending on which value benefits the hand more.
-        <p>Enjoy the game!</p>
+        <h3 style="text-align: center">INSTRUCTIONS TO PLAY</h3>
+        Blackjack with a Computer
 
+        <li class="lines">Cards dealing:</li>
+        You are dealt two cards each whilst the dealer is dealt one face up. If
+        your first 2 cards add up to 21 (an Ace and a card valued 10), that’s
+        Blackjack! If they have any other total, decide whether you wish to hit
+        or stand. You can continue to draw cards until you are happy with your
+        hand.
+
+        <li class="lines">Player's Turn:</li>
+        If the player has a total card value of 21 from the initial deal (an Ace
+        and a 10-value card), it's a Blackjack. If the dealer does not also have
+        Blackjack, the player wins. The player can decide to "Hit", which means
+        taking an additional card to increase their hand value. The player can
+        keep "Hitting" until they decide to "Stand" or their total card value
+        exceeds 21, which is called a "bust". If the player busts, the dealer
+        wins.
+
+        <li class="lines">Dealer's Turn:</li>
+        Once the player stands or busts, it's the dealer's turn. The dealer
+        reveals their hidden card. The dealer will continue to "Hit" until their
+        hand value is 17 or higher. If the dealer's hand value exceeds 21, the
+        dealer "busts" and the player wins (unless the player also busted
+        earlier).
+
+        <li class="lines">Determining the Winner:</li>
+        If neither the dealer nor the player busts, the hand with the highest
+        total card value wins. If both the dealer and the player have the same
+        hand value, it's a tie.
+
+        <li class="lines">Aces:</li>
+        An Ace can be valued as either 1 or 11, depending on which value
+        benefits the hand more.
+        <p>Enjoy the game!</p>
       </div>
       <div class="hands-container">
         <div class="dealer-hand">
@@ -71,4 +82,8 @@
     <a href="./index.html" class="back-btn">Back to main page</a>
     <!-- <script src="script.js"></script> -->
   </body>
+  <footer>
+    <br />
+    COPYRIGHT PROTECTED ©
+  </footer>
 </html>
